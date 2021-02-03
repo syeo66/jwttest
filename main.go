@@ -1,0 +1,32 @@
+package main
+
+import (
+	"fmt"
+
+	"github.com/syeo66/jwttest/jwtauth"
+)
+
+// jwt was generated using jwt.io
+// public and private keys from https://app.id123.io/free-tools/key-generator/
+
+func main() {
+	claims, err := jwtauth.ParseJWT(
+		"eyJhbGciOiJSUzI1NiIsImtpZCI6IjRlMjE2NjA3M2QxNjZlNTJmNWQxOTUwNGQzNDgzMzI1Zjg2ZGJjMTIiLCJ0eXAiOiJKV1QifQ.eyJtaW5kZmlyZSI6IjQyIn0.sxlqyyoIj7N34z5z-YTOrspiAXYRdb-z-YpHZqRt4fS34U7F08McI1qkMWhJan43FEXMPhYcvGCMrQH6bEnYtCD23IDdk5s-P76OHK18ohE8T7TKRtkwoWVAorqLMvKXt6NTrItWEyGbiuucy2bT5LRsHUtk1xhyrS7GJ9ZW5h2eteZsaiz_C9D_t5aIGKgxV-0EFgwO_KKJlsGsiG7lljK_TDRjQVwBhKOeejCea8qmA_Eih0Qix4Vom5E1jX3NPNbmv1-QxkMn0wQ63dLO1kR-SwsAczcQBrG1ZsOMeMA1tEHUkdMOe2tsfEU0BczOlasoAJIi6YpKQm7k4qDN2iJSBO_LmQTcAP4sFMwg5folr-Tm-Os-gya7X9UPIOtASsfg_lt6bB7xgYdTd2j5Z4eQqnpSqmkBJpaVG-Q3ek6aLpydwptLQ-ZzfPFrUWKYgSr3FNxGr7hazcPvMLNuph1h_wPwspj8IqfDhiTqKFFn-4igL0CBvOr4tKgt2_ecLl0g9RDZI1Qcao7bcRoGQZ35iukdY7GwCRQJ1sQ3Mm3Uhf0m2wMfaxFsSJZ1-mMICgVopuXMGAWc4HlF-pmtRbgldz4D9qlP7D0aB78OOCw48459TwAPst2pID5Aju7Y7dAIYkDKwmgWoRSp6xUtgjJXggsH05BIvSqedQ7Iq_4",
+		`-----BEGIN PUBLIC KEY-----
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtqCXLXbDgAegmAFtRKUn
+oh8gJa9tc85uwjZjP0CeE0D/aUb5RI0AzES2dI5JdiLx4Wsv+Bnm6jBW0P1T+zEv
+DY9WUSMgi1/+4QFh4yCLupwF6r3MQOpmzhw7XX15cSkmuzwsHQ7cTd48KZpC6hue
+nePdhQ47THZwJht3AVqgCLJmV6K61JkAXWK2FViMQ7hd6djILN8xd+fTUSGXuALc
+9hsrKiv+cTdKf44Vh0TxfCXsb1HXQQLC+9RoA0mAR49ai1akhC2oY84GH2SDMRRu
+3GUfUpCLOFCMr65JSwrjlMcvbqK8kkeIJ1buNq5omCfabvAT789V3lU2nIHtxydX
+EEyfLa3qruq4jVqUj9U93r3iAtGhoQqx5mitYd8yYCucy8CrOYBWlKGI3//J7MxD
+AKhvPvsStOk40BlxACEwgMC7PPnFTjvmGOjSZBopIHf92uSAEBPlPoTcXaLp2JF3
+zOekwm6QZ6XLw+e5dukyQXaoPu1sqD9MVK+PGRHw52ZOiu5DsphFP+KottP8hMyk
+HVVAIiGccIdG9l/Pq37aWg5fGMxiC8QjwIWzAV5WofOR1Rg195MIV2yXWR3ki9W1
+r5bEmFqvg5r/4Tgysrq4mDQcO6dtwJ45cKTl3tbCSdG3IG3wnteBtO78pXLEZygM
+43Ij/tEQolHA4d3DVfzNBbkCAwEAAQ==
+-----END PUBLIC KEY-----
+`,
+	)
+	fmt.Println(claims, err)
+}
